@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Oro - Soporte</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .language-selector {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .language-selector button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .language-selector button:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+        
+        .language-selector button.active {
+            background: #4c63d2;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .content h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .content h3 {
+            color: #555;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+        
+        .content p {
+            margin-bottom: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .content li {
+            margin-bottom: 8px;
+            color: #666;
+        }
+        
+        .contact-info {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .requirements {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .faq-item h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        
+        .app-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e6e9ff;
+        }
+        
+        .feature-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .language-selector button {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Punto de Oro</h1>
+            <p>Soporte y Ayuda</p>
+        </div>
+        
+        <div class="language-selector">
+            <button onclick="switchLanguage('es')" class="active" id="btn-es">🇪🇸 Español</button>
+            <button onclick="switchLanguage('en')" id="btn-en">🇺🇸 English</button>
+            <button onclick="switchLanguage('it')" id="btn-it">🇮🇹 Italiano</button>
+        </div>
+        
+        <!-- CONTENIDO EN ESPAÑOL -->
+        <div id="content-es" class="lang-content active">
+            <div class="content">
+                <h2>📱 Acerca de Punto de Oro</h2>
+                <p>Punto de Oro es la aplicación definitiva para jugadores de pádel que quieren llevar un seguimiento detallado de sus partidos y mejorar su rendimiento. Con integración perfecta entre iPhone y Apple Watch, puedes registrar puntos en tiempo real y analizar tus estadísticas como nunca antes.</p>
+                
+                <div class="app-features">
+                    <div class="feature-card">
+                        <h4>⌚ Apple Watch</h4>
+                        <p>Marca puntos directamente desde tu muñeca</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Estadísticas</h4>
+                        <p>Análisis detallado de tu rendimiento</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔄 Sincronización</h4>
+                        <p>Datos automáticos entre dispositivos</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🏆 Progreso</h4>
+                        <p>Sigue tu evolución partido a partido</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>❓ Preguntas Frecuentes</h2>
+                
+                <div class="faq-item">
+                    <h3>¿Cómo sincronizo mi Apple Watch con el iPhone?</h3>
+                    <p>1. Asegúrate de que ambos dispositivos estén encendidos y cerca</p>
+                    <p>2. Abre la app "Punto de Oro" en tu Apple Watch</p>
+                    <p>3. Abre la app en tu iPhone y ve a la pestaña "Inicio"</p>
+                    <p>4. Toca "Registrar Apple Watch" y sigue las instrucciones</p>
+                    <p>5. Una vez conectado, todos los partidos se sincronizarán automáticamente</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Cómo configuro las reglas del partido?</h3>
+                    <p>1. Ve a "Ajustes" en tu iPhone</p>
+                    <p>2. Selecciona "Configuración de Partidos"</p>
+                    <p>3. Ajusta las opciones según tus preferencias:</p>
+                    <ul>
+                        <li>Punto de Oro (activado/desactivado)</li>
+                        <li>Ventajas antes del Punto de Oro</li>
+                        <li>Tie Break</li>
+                        <li>Puntos por Set</li>
+                    </ul>
+                    <p>4. Los cambios se aplicarán automáticamente a tu Apple Watch</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Cómo inicio un partido en el Apple Watch?</h3>
+                    <p>1. Abre la app en tu Apple Watch</p>
+                    <p>2. Toca "Nuevo Partido"</p>
+                    <p>3. Selecciona tu equipo (A o B)</p>
+                    <p>4. Comienza a marcar puntos con los botones + y -</p>
+                    <p>5. El partido se guardará automáticamente al finalizar</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Puedo usar la app sin Apple Watch?</h3>
+                    <p>Sí, puedes usar Punto de Oro solo con iPhone para ver estadísticas y configurar ajustes. Sin embargo, para el seguimiento en tiempo real de partidos, necesitas un Apple Watch compatible.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Cómo activo el seguimiento de entrenamientos?</h3>
+                    <p>1. Ve a "Ajustes" > "Configuración de Partidos"</p>
+                    <p>2. Activa "Seguimiento de Entrenamiento"</p>
+                    <p>3. Concede permisos a HealthKit cuando se solicite</p>
+                    <p>4. Los entrenamientos se registrarán automáticamente en la app Salud</p>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>💬 Contacto y Soporte</h2>
+                <div class="contact-info">
+                    <p><strong>📧 Email:</strong> <a href="mailto:soporte@puntodeoro.app?subject=Soporte%20Punto%20de%20Oro">soporte@puntodeoro.app</a></p>
+                    <p><strong>⏰ Tiempo de respuesta:</strong> 24-48 horas</p>
+                    <p><strong>🌍 Idiomas:</strong> Español, English, Italiano</p>
+                </div>
+                
+                <h3>Al contactarnos, incluye:</h3>
+                <ul>
+                    <li>Versión de la app</li>
+                    <li>Modelo de iPhone y Apple Watch</li>
+                    <li>Versión de iOS y watchOS</li>
+                    <li>Descripción detallada del problema</li>
+                </ul>
+            </div>
+            
+            <div class="content">
+                <h2>⚙️ Requisitos del Sistema</h2>
+                <div class="requirements">
+                    <p><strong>📱 iPhone:</strong> iOS 16.0 o superior</p>
+                    <p><strong>⌚ Apple Watch:</strong> watchOS 9.0 o superior (opcional)</p>
+                    <p><strong>🔗 Conectividad:</strong> Bluetooth para sincronización</p>
+                    <p><strong>💾 Almacenamiento:</strong> 50 MB de espacio libre</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONTENIDO EN INGLÉS -->
+        <div id="content-en" class="lang-content">
+            <div class="content">
+                <h2>📱 About Golden Point</h2>
+                <p>Golden Point is the ultimate app for padel players who want to track their matches in detail and improve their performance. With seamless integration between iPhone and Apple Watch, you can record points in real-time and analyze your statistics like never before.</p>
+                
+                <div class="app-features">
+                    <div class="feature-card">
+                        <h4>⌚ Apple Watch</h4>
+                        <p>Score points directly from your wrist</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Statistics</h4>
+                        <p>Detailed analysis of your performance</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔄 Sync</h4>
+                        <p>Automatic data between devices</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🏆 Progress</h4>
+                        <p>Track your evolution match by match</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>❓ Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h3>How do I sync my Apple Watch with iPhone?</h3>
+                    <p>1. Make sure both devices are on and nearby</p>
+                    <p>2. Open "Golden Point" app on your Apple Watch</p>
+                    <p>3. Open the app on your iPhone and go to "Home" tab</p>
+                    <p>4. Tap "Register Apple Watch" and follow instructions</p>
+                    <p>5. Once connected, all matches will sync automatically</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do I configure match rules?</h3>
+                    <p>1. Go to "Settings" on your iPhone</p>
+                    <p>2. Select "Match Configuration"</p>
+                    <p>3. Adjust options according to your preferences:</p>
+                    <ul>
+                        <li>Golden Point (enabled/disabled)</li>
+                        <li>Advantages before Golden Point</li>
+                        <li>Tie Break</li>
+                        <li>Points per Set</li>
+                    </ul>
+                    <p>4. Changes will automatically apply to your Apple Watch</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do I start a match on Apple Watch?</h3>
+                    <p>1. Open the app on your Apple Watch</p>
+                    <p>2. Tap "New Match"</p>
+                    <p>3. Select your team (A or B)</p>
+                    <p>4. Start scoring points with + and - buttons</p>
+                    <p>5. The match will be saved automatically when finished</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I use the app without Apple Watch?</h3>
+                    <p>Yes, you can use Golden Point with iPhone only to view statistics and configure settings. However, for real-time match tracking, you need a compatible Apple Watch.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do I enable training tracking?</h3>
+                    <p>1. Go to "Settings" > "Match Configuration"</p>
+                    <p>2. Enable "Training Tracking"</p>
+                    <p>3. Grant HealthKit permissions when requested</p>
+                    <p>4. Workouts will be automatically recorded in the Health app</p>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>💬 Contact and Support</h2>
+                <div class="contact-info">
+                    <p><strong>📧 Email:</strong> <a href="mailto:support@goldenpoint.app?subject=Golden%20Point%20Support">support@goldenpoint.app</a></p>
+                    <p><strong>⏰ Response time:</strong> 24-48 hours</p>
+                    <p><strong>🌍 Languages:</strong> Español, English, Italiano</p>
+                </div>
+                
+                <h3>When contacting us, include:</h3>
+                <ul>
+                    <li>App version</li>
+                    <li>iPhone and Apple Watch model</li>
+                    <li>iOS and watchOS version</li>
+                    <li>Detailed problem description</li>
+                </ul>
+            </div>
+            
+            <div class="content">
+                <h2>⚙️ System Requirements</h2>
+                <div class="requirements">
+                    <p><strong>📱 iPhone:</strong> iOS 16.0 or later</p>
+                    <p><strong>⌚ Apple Watch:</strong> watchOS 9.0 or later (optional)</p>
+                    <p><strong>🔗 Connectivity:</strong> Bluetooth for synchronization</p>
+                    <p><strong>💾 Storage:</strong> 50 MB free space</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONTENIDO EN ITALIANO -->
+        <div id="content-it" class="lang-content">
+            <div class="content">
+                <h2>📱 Informazioni su Punto d'Oro</h2>
+                <p>Punto d'Oro è l'app definitiva per i giocatori di padel che vogliono tracciare le loro partite in dettaglio e migliorare le loro prestazioni. Con integrazione perfetta tra iPhone e Apple Watch, puoi registrare punti in tempo reale e analizzare le tue statistiche come mai prima d'ora.</p>
+                
+                <div class="app-features">
+                    <div class="feature-card">
+                        <h4>⌚ Apple Watch</h4>
+                        <p>Segna punti direttamente dal polso</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Statistiche</h4>
+                        <p>Analisi dettagliata delle prestazioni</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔄 Sincronizzazione</h4>
+                        <p>Dati automatici tra dispositivi</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🏆 Progresso</h4>
+                        <p>Traccia la tua evoluzione partita per partita</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>❓ Domande Frequenti</h2>
+                
+                <div class="faq-item">
+                    <h3>Come sincronizzo il mio Apple Watch con iPhone?</h3>
+                    <p>1. Assicurati che entrambi i dispositivi siano accesi e vicini</p>
+                    <p>2. Apri l'app "Punto d'Oro" sul tuo Apple Watch</p>
+                    <p>3. Apri l'app sul tuo iPhone e vai alla scheda "Home"</p>
+                    <p>4. Tocca "Registra Apple Watch" e segui le istruzioni</p>
+                    <p>5. Una volta connesso, tutte le partite si sincronizzeranno automaticamente</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Come configuro le regole della partita?</h3>
+                    <p>1. Vai su "Impostazioni" sul tuo iPhone</p>
+                    <p>2. Seleziona "Configurazione Partite"</p>
+                    <p>3. Regola le opzioni secondo le tue preferenze:</p>
+                    <ul>
+                        <li>Punto d'Oro (attivato/disattivato)</li>
+                        <li>Vantaggi prima del Punto d'Oro</li>
+                        <li>Tie Break</li>
+                        <li>Punti per Set</li>
+                    </ul>
+                    <p>4. Le modifiche si applicheranno automaticamente al tuo Apple Watch</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Come inizio una partita su Apple Watch?</h3>
+                    <p>1. Apri l'app sul tuo Apple Watch</p>
+                    <p>2. Tocca "Nuova Partita"</p>
+                    <p>3. Seleziona la tua squadra (A o B)</p>
+                    <p>4. Inizia a segnare punti con i pulsanti + e -</p>
+                    <p>5. La partita verrà salvata automaticamente al termine</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Posso usare l'app senza Apple Watch?</h3>
+                    <p>Sì, puoi usare Punto d'Oro solo con iPhone per visualizzare statistiche e configurare impostazioni. Tuttavia, per il tracciamento in tempo reale delle partite, hai bisogno di un Apple Watch compatibile.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Come attivo il tracciamento degli allenamenti?</h3>
+                    <p>1. Vai su "Impostazioni" > "Configurazione Partite"</p>
+                    <p>2. Attiva "Tracciamento Allenamento"</p>
+                    <p>3. Concedi i permessi HealthKit quando richiesto</p>
+                    <p>4. Gli allenamenti verranno registrati automaticamente nell'app Salute</p>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h2>💬 Contatto e Supporto</h2>
+                <div class="contact-info">
+                    <p><strong>📧 Email:</strong> <a href="mailto:supporto@puntodoro.app?subject=Supporto%20Punto%20d'Oro">supporto@puntodoro.app</a></p>
+                    <p><strong>⏰ Tempo di risposta:</strong> 24-48 ore</p>
+                    <p><strong>🌍 Lingue:</strong> Español, English, Italiano</p>
+                </div>
+                
+                <h3>Quando ci contatti, includi:</h3>
+                <ul>
+                    <li>Versione dell'app</li>
+                    <li>Modello di iPhone e Apple Watch</li>
+                    <li>Versione di iOS e watchOS</li>
+                    <li>Descrizione dettagliata del problema</li>
+                </ul>
+            </div>
+            
+            <div class="content">
+                <h2>⚙️ Requisiti di Sistema</h2>
+                <div class="requirements">
+                    <p><strong>📱 iPhone:</strong> iOS 16.0 o successivo</p>
+                    <p><strong>⌚ Apple Watch:</strong> watchOS 9.0 o successivo (opzionale)</p>
+                    <p><strong>🔗 Connettività:</strong> Bluetooth per la sincronizzazione</p>
+                    <p><strong>💾 Archiviazione:</strong> 50 MB di spazio libero</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 Punto de Oro. Todos los derechos reservados.</p>
+            <p>Versión 1.0.0 | Última actualización: Enero 2024</p>
+        </div>
+    </div>
+    
+    <script>
+        function switchLanguage(lang) {
+            // Ocultar todos los contenidos
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remover clase active de todos los botones
+            document.querySelectorAll('.language-selector button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Mostrar contenido seleccionado
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html> 
