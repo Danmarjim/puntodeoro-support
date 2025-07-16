@@ -98,4 +98,277 @@
             color: #444;
         }
 
-...
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ff6b35;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+
+        a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .data-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .app-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🎾</div>
+            <h1>Privacy Policy</h1>
+            <div class="subtitle">Punto de Oro - Padel Tracking App</div>
+            <div class="last-updated">Last Updated: December 2024</div>
+        </div>
+
+        <div class="highlight">
+            <strong>Important:</strong> This privacy policy explains how Punto de Oro ("we," "our," or "us") collects, uses, and protects your personal information when you use our padel tracking application available on the App Store.
+        </div>
+
+        <h2>1. Information We Collect</h2>
+        
+        <h3>1.1 Health and Fitness Data</h3>
+        <p>With your explicit consent, Punto de Oro integrates with Apple HealthKit to collect and process:</p>
+        <ul>
+            <li><strong>Workout Data:</strong> Exercise sessions, duration, and activity type</li>
+            <li><strong>Health Metrics:</strong> Heart rate during workouts (if available)</li>
+            <li><strong>Activity Data:</strong> Steps taken, active energy burned, distance covered</li>
+            <li><strong>Workout Statistics:</strong> Training frequency and performance metrics</li>
+        </ul>
+
+        <h3>1.2 Match and Performance Data</h3>
+        <p>We collect information about your padel matches and performance, including:</p>
+        <ul>
+            <li><strong>Match Statistics:</strong> Scores, points won/lost, service efficiency</li>
+            <li><strong>Game Configuration:</strong> Match settings, rules preferences</li>
+            <li><strong>Performance Metrics:</strong> Break points, golden points, match duration</li>
+            <li><strong>Historical Data:</strong> Past match records and improvement tracking</li>
+        </ul>
+
+        <h3>1.3 Device and Technical Data</h3>
+        <ul>
+            <li><strong>Device Information:</strong> iPhone and Apple Watch synchronization data</li>
+            <li><strong>App Usage:</strong> Features used, preferences, and app interaction data</li>
+            <li><strong>Technical Data:</strong> App version, device model, iOS version</li>
+        </ul>
+
+        <h3>1.4 Subscription and Payment Data</h3>
+        <p>For Premium features, we process payment information through:</p>
+        <ul>
+            <li><strong>Apple App Store:</strong> Payment processing and subscription management</li>
+            <li><strong>RevenueCat:</strong> Subscription status and entitlement management</li>
+        </ul>
+
+        <h2>2. How We Use Your Information</h2>
+        
+        <h3>2.1 Core App Functionality</h3>
+        <ul>
+            <li>Track and analyze your padel match performance</li>
+            <li>Synchronize data between your iPhone and Apple Watch</li>
+            <li>Provide personalized statistics and insights</li>
+            <li>Generate match reports and performance trends</li>
+        </ul>
+
+        <h3>2.2 Health Integration</h3>
+        <ul>
+            <li>Record workouts in Apple Health with your consent</li>
+            <li>Display health metrics related to your padel training</li>
+            <li>Provide comprehensive fitness tracking</li>
+        </ul>
+
+        <h3>2.3 App Improvement</h3>
+        <ul>
+            <li>Analyze usage patterns to improve app features</li>
+            <li>Identify and fix technical issues</li>
+            <li>Develop new features based on user needs</li>
+        </ul>
+
+        <h2>3. Data Storage and Security</h2>
+        
+        <h3>3.1 Local Storage</h3>
+        <p>Most of your data is stored locally on your device using:</p>
+        <ul>
+            <li><strong>UserDefaults:</strong> App preferences and settings</li>
+            <li><strong>Local Database:</strong> Match history and statistics</li>
+            <li><strong>HealthKit:</strong> Health data (managed by Apple)</li>
+        </ul>
+
+        <h3>3.2 Third-Party Services</h3>
+        <table class="data-table">
+            <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Shared</th>
+            </tr>
+            <tr>
+                <td>Apple HealthKit</td>
+                <td>Health data integration</td>
+                <td>Workout data, health metrics</td>
+            </tr>
+            <tr>
+                <td>RevenueCat</td>
+                <td>Subscription management</td>
+                <td>Purchase receipts, subscription status</td>
+            </tr>
+            <tr>
+                <td>Apple App Store</td>
+                <td>Payment processing</td>
+                <td>Purchase information</td>
+            </tr>
+        </table>
+
+        <h3>3.3 Security Measures</h3>
+        <ul>
+            <li>Data encryption in transit and at rest</li>
+            <li>Secure API communications</li>
+            <li>Regular security updates</li>
+            <li>Compliance with Apple's security standards</li>
+        </ul>
+
+        <h2>4. Data Sharing and Disclosure</h2>
+        
+        <p>We do not sell, trade, or rent your personal information to third parties. We may share information only in the following circumstances:</p>
+        
+        <h3>4.1 With Your Consent</h3>
+        <ul>
+            <li>When you explicitly authorize data sharing</li>
+            <li>Health data shared with Apple Health (with your permission)</li>
+        </ul>
+
+        <h3>4.2 Service Providers</h3>
+        <ul>
+            <li>Payment processing through Apple App Store</li>
+            <li>Subscription management through RevenueCat</li>
+        </ul>
+
+        <h3>4.3 Legal Requirements</h3>
+        <ul>
+            <li>When required by law or legal process</li>
+            <li>To protect our rights and safety</li>
+            <li>To prevent fraud or abuse</li>
+        </ul>
+
+        <h2>5. Your Rights and Choices</h2>
+        
+        <h3>5.1 Data Control</h3>
+        <ul>
+            <li><strong>Health Data:</strong> Manage permissions in iOS Settings → Health → Data Access & Devices</li>
+            <li><strong>App Data:</strong> Reset statistics and data within the app settings</li>
+            <li><strong>Subscriptions:</strong> Manage through App Store settings</li>
+        </ul>
+
+        <h3>5.2 Data Portability</h3>
+        <ul>
+            <li>Export your match data through the app's export features</li>
+            <li>Health data can be exported through Apple Health app</li>
+        </ul>
+
+        <h3>5.3 Data Deletion</h3>
+        <ul>
+            <li>Delete the app to remove all locally stored data</li>
+            <li>Use the "Reset Statistics" option in app settings</li>
+            <li>Contact us for additional data deletion requests</li>
+        </ul>
+
+        <h2>6. International Data Transfers</h2>
+        <p>Your data is primarily stored locally on your device. When data is transmitted to third-party services:</p>
+        <ul>
+            <li><strong>Apple Services:</strong> Processed according to Apple's privacy policies</li>
+            <li><strong>RevenueCat:</strong> Processed in accordance with their privacy standards</li>
+        </ul>
+
+        <h2>7. Data Retention</h2>
+        <ul>
+            <li><strong>Match Data:</strong> Retained locally until you delete the app or reset data</li>
+            <li><strong>Health Data:</strong> Managed by Apple Health according to your settings</li>
+            <li><strong>Subscription Data:</strong> Retained by Apple and RevenueCat as per their policies</li>
+        </ul>
+
+        <h2>8. Children's Privacy</h2>
+        <p>Punto de Oro is designed for users aged 13 and older. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately.</p>
+
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>We may update this privacy policy from time to time. When we do, we will:</p>
+        <ul>
+            <li>Post the updated policy on this page</li>
+            <li>Update the "Last Updated" date</li>
+            <li>Notify users of significant changes through the app</li>
+        </ul>
+
+        <h2>10. Contact Information</h2>
+        <div class="contact-info">
+            <p><strong>Data Controller:</strong> Daniel Martin Jimenez</p>
+            <p><strong>App:</strong> Punto de Oro</p>
+            <p><strong>Bundle ID:</strong> com.danmarjim.puntodeoro</p>
+            <p><strong>Support:</strong> Available through App Store Connect</p>
+            <p><strong>Questions:</strong> For privacy-related questions, please contact us through the App Store support system.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Punto de Oro. All rights reserved.</p>
+            <p>This privacy policy is compliant with Apple App Store guidelines and applicable privacy laws.</p>
+        </div>
+    </div>
+</body>
+</html> 
