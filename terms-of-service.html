@@ -98,4 +98,333 @@
             color: #444;
         }
 
-...
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ff6b35;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning {
+            background-color: #f8d7da;
+            padding: 15px;
+            border-left: 4px solid #dc3545;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+
+        a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .feature-list {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .feature-list h4 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .feature-list ul {
+            margin-left: 0;
+        }
+
+        .feature-list li {
+            list-style: none;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .app-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🎾</div>
+            <h1>Terms of Service</h1>
+            <div class="subtitle">Punto de Oro - Padel Tracking App</div>
+            <div class="last-updated">Last Updated: December 2024</div>
+        </div>
+
+        <div class="highlight">
+            <strong>Agreement:</strong> By downloading, installing, or using PuntoDeOro, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app.
+        </div>
+
+        <h2>1. About PuntoDeOro</h2>
+        
+        <p>Punto de Oro is a padel tracking application developed by Daniel Mar for iPhone and Apple Watch devices. The app provides match tracking, performance analytics, health integration, and premium features to enhance your padel experience.</p>
+
+        <div class="feature-list">
+            <h4>Core Features Include:</h4>
+            <ul>
+                <li>Match scoring and statistics tracking</li>
+                <li>Apple Watch integration and synchronization</li>
+                <li>Health and fitness data integration</li>
+                <li>Performance analytics and insights</li>
+                <li>Premium subscription features</li>
+                <li>Multi-language support (English, Spanish, Italian)</li>
+            </ul>
+        </div>
+
+        <h2>2. License and Usage</h2>
+        
+        <h3>2.1 License Grant</h3>
+        <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to use Punto de Oro for personal, non-commercial purposes on your Apple devices.</p>
+
+        <h3>2.2 Restrictions</h3>
+        <p>You may not:</p>
+        <ul>
+            <li>Modify, reverse engineer, or create derivative works of the app</li>
+            <li>Use the app for any illegal or unauthorized purpose</li>
+            <li>Attempt to gain unauthorized access to any portion of the app</li>
+            <li>Interfere with or disrupt the app's functionality</li>
+            <li>Share your account credentials with third parties</li>
+        </ul>
+
+        <h2>3. User Accounts and Data</h2>
+        
+        <h3>3.1 Account Responsibility</h3>
+        <p>You are responsible for:</p>
+        <ul>
+            <li>The security of your device and app data</li>
+            <li>All activities that occur under your account</li>
+            <li>Keeping your app updated to the latest version</li>
+            <li>Backing up your data as needed</li>
+        </ul>
+
+        <h3>3.2 Data Accuracy</h3>
+        <p>You acknowledge that:</p>
+        <ul>
+            <li>Match data and statistics depend on your accurate input</li>
+            <li>Health data integration requires proper device setup</li>
+            <li>The app is for recreational tracking purposes</li>
+        </ul>
+
+        <h2>4. Premium Subscription Services</h2>
+        
+        <h3>4.1 Subscription Plans</h3>
+        <p>Punto de Oro offers premium subscription plans with enhanced features:</p>
+        <ul>
+            <li><strong>Monthly Subscription:</strong> Billed monthly at the current rate</li>
+            <li><strong>Annual Subscription:</strong> Billed annually with potential savings</li>
+        </ul>
+
+        <h3>4.2 Billing and Payments</h3>
+        <ul>
+            <li>All payments are processed through the Apple App Store</li>
+            <li>Subscriptions auto-renew unless cancelled before renewal</li>
+            <li>Pricing may change with 30 days notice</li>
+            <li>No refunds for partial subscription periods</li>
+        </ul>
+
+        <h3>4.3 Cancellation</h3>
+        <ul>
+            <li>Cancel anytime through your Apple ID account settings</li>
+            <li>Cancellation takes effect at the end of the current billing period</li>
+            <li>Premium features remain active until subscription expires</li>
+        </ul>
+
+        <h2>5. Health and HealthKit Integration</h2>
+        
+        <h3>5.1 Health Data Disclaimer</h3>
+        <div class="warning">
+            <strong>Important:</strong> Punto de Oro is not a medical device and should not be used for medical diagnosis or treatment. Consult healthcare professionals for medical advice.
+        </div>
+
+        <h3>5.2 HealthKit Integration</h3>
+        <p>When you enable HealthKit integration:</p>
+        <ul>
+            <li>Data is shared with Apple Health with your explicit consent</li>
+            <li>You can revoke health permissions at any time</li>
+            <li>Health data is managed according to Apple's privacy policies</li>
+            <li>Workout data is recorded for fitness tracking purposes</li>
+        </ul>
+
+        <h2>6. Privacy and Data Protection</h2>
+        
+        <p>Your privacy is important to us. Our data practices are detailed in our <a href="privacy-policy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+
+        <h3>6.1 Data Collection</h3>
+        <ul>
+            <li>We collect only necessary data for app functionality</li>
+            <li>Most data is stored locally on your device</li>
+            <li>Health data requires explicit user consent</li>
+        </ul>
+
+        <h3>6.2 Data Sharing</h3>
+        <ul>
+            <li>We do not sell your personal data to third parties</li>
+            <li>Limited data sharing with Apple and RevenueCat for app functionality</li>
+            <li>Data sharing requires appropriate privacy safeguards</li>
+        </ul>
+
+        <h2>7. Disclaimers and Limitations</h2>
+        
+        <h3>7.1 Service Availability</h3>
+        <p>We strive to provide reliable service but cannot guarantee:</p>
+        <ul>
+            <li>Uninterrupted app availability</li>
+            <li>Error-free operation</li>
+            <li>Compatibility with all device configurations</li>
+            <li>Continuous availability of all features</li>
+        </ul>
+
+        <h3>7.2 Limitation of Liability</h3>
+        <p>To the maximum extent permitted by law, we disclaim all warranties and limit our liability for:</p>
+        <ul>
+            <li>Data loss or corruption</li>
+            <li>Device compatibility issues</li>
+            <li>Third-party service disruptions</li>
+            <li>Indirect, incidental, or consequential damages</li>
+        </ul>
+
+        <h2>8. Third-Party Services</h2>
+        
+        <h3>8.1 Apple Services</h3>
+        <p>Punto de Oro integrates with Apple services:</p>
+        <ul>
+            <li><strong>App Store:</strong> For app distribution and payments</li>
+            <li><strong>HealthKit:</strong> For health data integration</li>
+            <li><strong>WatchKit:</strong> For Apple Watch functionality</li>
+        </ul>
+
+        <h3>8.2 RevenueCat</h3>
+        <p>We use RevenueCat for subscription management:</p>
+        <ul>
+            <li>Subscription status and entitlement management</li>
+            <li>Purchase validation and fraud prevention</li>
+            <li>Analytics for subscription performance</li>
+        </ul>
+
+        <h2>9. Updates and Modifications</h2>
+        
+        <h3>9.1 App Updates</h3>
+        <ul>
+            <li>We may release updates to improve functionality and security</li>
+            <li>Some updates may require acceptance of new terms</li>
+            <li>Continued use after updates constitutes acceptance</li>
+        </ul>
+
+        <h3>9.2 Terms Changes</h3>
+        <ul>
+            <li>We may modify these Terms with reasonable notice</li>
+            <li>Material changes will be communicated through the app</li>
+            <li>Your continued use constitutes acceptance of changes</li>
+        </ul>
+
+        <h2>10. Termination</h2>
+        
+        <h3>10.1 Termination by You</h3>
+        <p>You may terminate your use of Punto de Oro at any time by:</p>
+        <ul>
+            <li>Deleting the app from your devices</li>
+            <li>Cancelling any active subscriptions</li>
+            <li>Discontinuing use of the service</li>
+        </ul>
+
+        <h3>10.2 Termination by Us</h3>
+        <p>We may terminate or suspend your access if you:</p>
+        <ul>
+            <li>Violate these Terms of Service</li>
+            <li>Engage in fraudulent activities</li>
+            <li>Cause harm to other users or the service</li>
+        </ul>
+
+        <h2>11. Governing Law and Disputes</h2>
+        
+        <h3>11.1 Governing Law</h3>
+        <p>These Terms are governed by the laws of the jurisdiction where the app is developed and distributed through the Apple App Store.</p>
+
+        <h3>11.2 Dispute Resolution</h3>
+        <p>Any disputes arising from these Terms or your use of Punto de Oro should be resolved through:</p>
+        <ul>
+            <li>Direct communication through app support channels</li>
+            <li>Apple's dispute resolution process for App Store purchases</li>
+            <li>Applicable local consumer protection laws</li>
+        </ul>
+
+        <h2>12. Intellectual Property</h2>
+        
+        <h3>12.1 App Ownership</h3>
+        <p>Punto de Oro, including its design, code, and content, is owned by Daniel Mar and protected by intellectual property laws.</p>
+
+        <h3>12.2 User Content</h3>
+        <p>You retain ownership of your match data and statistics. By using the app, you grant us a license to process your data as described in our Privacy Policy.</p>
+
+        <h2>13. Accessibility and Inclusion</h2>
+        
+        <p>We strive to make Punto de Oro accessible to users with disabilities and welcome feedback on how we can improve accessibility features.</p>
+
+        <h2>14. Age Requirements</h2>
+        
+        <p>Punto de Oro is intended for users aged 13 and older. If you are under 18, you should have parental consent to use the app and make purchases.</p>
+
+        <h2>15. Contact Information</h2>
+        
+        <div class="contact-info">
+            <p><strong>Developer:</strong> Daniel Martin Jimenez</p>
+            <p><strong>App:</strong> Punto de Oro</p>
+            <p><strong>Bundle ID:</strong> com.danmarjim.puntodeoro</p>
+            <p><strong>Support:</strong> Available through App Store Connect</p>
+            <p><strong>Legal Questions:</strong> Please contact us through the App Store support system for any legal inquiries.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 PuntoDeOro. All rights reserved.</p>
+            <p>These Terms of Service are compliant with Apple App Store guidelines and applicable laws.</p>
+        </div>
+    </div>
+</body>
+</html> 
